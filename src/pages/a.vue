@@ -9,8 +9,10 @@ export default {
   async created() {
     // 测试 axios 发请求
     try {
+      console.log('请求前');
       const res = await this.$request('/carhailingService/login.do');
       console.log(res);
+      console.log('请求后');
     } catch (err) {
       console.log('出错', err);
     } finally {
