@@ -1,6 +1,6 @@
 <template>
   <div>
-    aaa
+    <span class="test">测试文字</span>
   </div>
 </template>
 
@@ -22,3 +22,9 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.test {
+  color: red;
+}
+</style>

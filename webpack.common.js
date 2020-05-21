@@ -3,7 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
-const utils = require('./utils');
+// const utils = require('./utils');
 
 module.exports = {
   entry: {
@@ -25,12 +25,27 @@ module.exports = {
         exclude: /node_modules/, // 不检测的文件
         include: [__dirname + '/src'], // 要检查的目录
       },
-    ].concat(
-      utils.styleLoaders({
-        sourceMap: false,
-        extract: true,
-      }),
-    ),
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'sass-loader',
+          },
+        ],
+      },
+    ],
+    // ].concat(
+    //   utils.styleLoaders({
+    //     sourceMap: false,
+    //     extract: true,
+    //   }),
+    // ),
   },
   plugins: [
     new CleanWebpackPlugin(),

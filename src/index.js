@@ -7,6 +7,8 @@ import app from './index.vue';
 import tools from './common/js/index';
 import request from './common/js/request';
 
+import './common/css/index.scss';
+
 Vue.use(tools);
 Vue.use(request);
 
