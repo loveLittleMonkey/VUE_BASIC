@@ -4,10 +4,22 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
-  state: {},
-  mutations: {},
-  actions: {},
-  getters: {},
+  state: {
+    myVuex: 'myVuex',
+  },
+  mutations: {
+    setMyVuex(state, myVuex) {
+      state.myVuex = myVuex;
+    },
+  },
+  actions: {
+    setMyVuexAction({ commit }, myVuex) {
+      commit('setMyVuex', myVuex);
+    },
+  },
+  getters: {
+    myVuex: state => state.myVuex,
+  },
   modules: {},
 });
 
