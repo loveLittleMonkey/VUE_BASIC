@@ -1,25 +1,14 @@
 const path = require('path');
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 const utils = require('./utils');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const SkeletonWebpackPlugin = require('vue-skeleton-webpack-plugin');
 
-const config = {
+module.exports = {
   entry: {
-    vue: './src/index.js',
+    app: './src/index.js',
   },
-  output: {
-    filename: '[name].bundle.[chunkhash].js',
-    path: path.join(__dirname, 'dist'),
-  },
-  devtool: 'inline-source-map',
-  externals: {
-    Vue: 'Vue',
-  },
-  mode: 'development',
   module: {
     rules: [
       {
@@ -43,9 +32,7 @@ const config = {
     ),
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: utils.assetsPath('css/[name].css'),
-    }),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './template/index.html',
       inject: true,
@@ -57,21 +44,10 @@ const config = {
       },
       chunksSortMode: 'dependency',
     }),
-    new SkeletonWebpackPlugin({
-      webpackConfig: {
-        entry: {
-          vue: './skeleton/entry-skeleton.js', // 这里的入口要符合 打包的入口名册，不能默认的 SkeletonWebpackPlugin 的 app
-        },
-      },
-      quiet: true,
-    }),
-    new CleanWebpackPlugin(),
     new VueLoaderPlugin(),
   ],
-  devServer: {
-    contentBase: './dist',
-    host: '0.0.0.0',
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
   },
 };
-
-module.exports = config;

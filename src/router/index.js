@@ -6,7 +6,7 @@ const router = new Router({
   routes: [
     { path: '/', redirect: '/a' },
     { path: '/a', component: () => import('../pages/a.vue') },
-    { path: '/b', component: () => import('../pages/a.vue') },
+    { path: '/b', component: () => import('../pages/b.vue') },
   ],
 });
 
