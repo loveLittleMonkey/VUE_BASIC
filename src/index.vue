@@ -1,15 +1,13 @@
 <template>
-    <div class="app">
-        <transition>
-            <keep-alive>
-                <router-view></router-view>
-            </keep-alive>
-        </transition>
-    </div>
+  <div class="app">
+    <transition>
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
+    </transition>
+  </div>
 </template>
 
 <script>
-export default {
-    
-}
+export default {};
 </script>
