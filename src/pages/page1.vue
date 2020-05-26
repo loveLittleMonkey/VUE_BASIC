@@ -12,7 +12,7 @@ export default {
   },
 
   async created() {
-    // 测试 axios 发请求
+    // 测试 axios 发请求 what can i do?
     try {
       console.log('请求前');
       // const res = await this.$request('/carhailingService/login.do');
