@@ -21,7 +21,7 @@ axios.interceptors.response.use(response => {
 const request = (url, data = {}) => {
   return axios({
     url,
-    data,
+    params: { rf: 'JSON', ...data },
   });
 };
 

@@ -15,7 +15,8 @@ export default {
     // 测试 axios 发请求
     try {
       console.log('请求前');
-      const res = await this.$request('/carhailingService/login.do');
+      // const res = await this.$request('/carhailingService/login.do');
+      const res = await this.$request('/innermanage/queryBankNotice1.do');
       console.log('请求返回', res);
     } catch (err) {
       console.log('出错', err);
