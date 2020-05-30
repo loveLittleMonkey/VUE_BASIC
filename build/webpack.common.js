@@ -35,6 +35,18 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              esModule: false,
+              limit: 102400, // 1024 byte = 1kb 设置小于100k就转base64
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
@@ -54,5 +66,11 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, '../dist'),
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, '../src'),
+      '@a': path.resolve(__dirname, '../src/assets/'),
+    },
   },
 };
