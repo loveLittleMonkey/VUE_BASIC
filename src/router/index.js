@@ -4,8 +4,8 @@ import Router from 'vue-router';
 Vue.use(Router);
 const router = new Router({
   routes: [
-    { path: '/', redirect: '/page1' },
-    { path: '/page1', component: () => import('../pages/page1.vue') },
+    { path: '/', redirect: '/a' },
+    { path: '/a', component: () => import('../pages/a.vue') },
     { path: '/b', component: () => import('../pages/b.vue') },
   ],
 });
