@@ -1,6 +1,9 @@
 <template>
   <div>
     <span class="test">测试文字</span>
+    <span class="blue">测试css </span>
+    <span class="yellow">测试入口css </span>
+    <span class="iconfont icon-jiaotongyinhang"></span>
 
     <img :src="imageSrc" alt="图片1" srcset="" />
     <img src="@a/images/2.jpg" alt="图片2" srcset="" />
@@ -30,8 +33,8 @@ export default {
       console.log('image3', image3);
       console.log('请求前');
       // const res = await this.$request('/carhailingService/login.do');
-      const res = await this.$request('/innermanage/queryBankNotice1.do');
-      console.log('请求返回', res);
+      // const res = await this.$request('/innermanage/queryBankNotice1.do');
+      // console.log('请求返回', res);
     } catch (err) {
       console.log('出错', err);
     } finally {
