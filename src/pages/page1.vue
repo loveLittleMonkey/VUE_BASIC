@@ -67,10 +67,11 @@ export default {
     ...mapGetters(['myVuex']),
   },
   async created() {
-    // 测试 axios 发请求
+    // 测试 axios 发请求 what can i do?
     try {
       console.log('请求前');
-      const res = await this.$request('/carhailingService/login.do');
+      // const res = await this.$request('/carhailingService/login.do');
+      const res = await this.$request('/innermanage/queryBankNotice1.do');
       console.log('请求返回', res);
     } catch (err) {
       console.log('出错', err);
@@ -163,4 +164,13 @@ export default {
 };
 </script>
 
+<<<<<<< HEAD:src/pages/a.vue
 <style lang="scss" src="../common/css/a.scss"></style>
+=======
+<style lang="scss">
+@import './index.scss';
+.test {
+  color: red;
+}
+</style>
+>>>>>>> 39361ff5902a9a67edd7466dbadaf5fb0931d84f:src/pages/page1.vue

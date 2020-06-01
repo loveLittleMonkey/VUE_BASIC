@@ -8,8 +8,8 @@ module.exports = merge(common, {
     contentBase: './dist',
     host: 'localhost',
     proxy: {
-      '/carhailingService': {
-        target: ' https://monitor.dongguantong.com.cn:18181',
+      '/innermanage': {
+        target: 'http://192.168.1.155:9080',
       },
     },
   },
