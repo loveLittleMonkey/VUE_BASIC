@@ -6,7 +6,7 @@ module.exports = merge(common, {
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './dist',
-    host: '0.0.0.0',
+    host: 'localhost',
     proxy: {
       '/carhailingService': {
         target: ' https://monitor.dongguantong.com.cn:18181',
