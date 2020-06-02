@@ -1,0 +1,33 @@
+.submitMessage{
+    width: 90%;
+    height: 7rem;
+    background-color: white;
+    margin: auto;
+    margin-top: 84px;
+}
+.submitMessage span{
+    font-size: 14px;
+    line-height: 1.5;
+}
+h4{
+    display: block;
+    margin-bottom: 20px;
+}
+.btnMessage input{
+    width: 90%;
+    height: 2.5rem;
+    background-color: white;
+    border: 1px solid red;
+    border-radius: 20px;
+    margin-left: 5%;
+    outline: none;
+}
+.alayout_header{
+    width: 100%; 
+    height: 2rem;
+    background-color: white;
+    font-size: 0.8rem;
+    line-height: 2.2rem;
+    // text-align: center;
+    border-bottom: 1px solid #e9e3e3 ;
+}
