@@ -4,7 +4,7 @@
       <router-link to="/a" style="padding-right: 6rem; padding-left: 0.5rem; color: black; text-decoration: none;"
         ><img class="img" :src="urlImg" alt="返回"
       /></router-link>
-      <span>提交结果</span>
+      <span>提交结果11111</span>
     </div>
     <div v-show="success" class="submitMessage">
       <img :src="logo" alt="logo" class="logo" /><br />
