@@ -1,0 +1,45 @@
+.submitMessage{
+    width: 90%;
+    background-color: white;
+    margin: auto;
+    margin-top: 45px;
+    // border: 1px solid black;
+}
+.submitSuccess{
+    text-align: center;
+    line-height: 2.6rem;
+}
+.submitMessage span{
+    font-size: 14px;
+    line-height: 1.5;
+}
+.btnMessage input{
+    width: 90%;
+    height: 2.5rem;
+    background-color: white;
+    border: 1px solid red;
+    border-radius: 20px;
+    margin-left: 5%;
+    outline: none;
+    margin-top: 20px;
+}
+.alayout_header{
+    width: 100%; 
+    height: 2rem;
+    background-color: white;
+    font-size: 0.8rem;
+    line-height: 2rem;
+    border-bottom: 1px solid #e9e3e3 ;
+}
+.alayout_header span{
+    position: relative;
+    top: -6px;
+}
+.img{
+    width: 27px;
+    padding-top: 7px;
+}
+.logo{
+    width: 74px;
+    padding-left: 107px;
+}

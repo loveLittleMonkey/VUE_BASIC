@@ -2,7 +2,9 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-
+function resolve(dir) {
+  return path.join(__dirname, '..', dir);
+}
 module.exports = {
   entry: {
     app: './src/index.js',
@@ -22,6 +24,17 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+        ],
+      },
+      {
         test: /\.scss$/,
         use: [
           {
@@ -36,6 +49,7 @@ module.exports = {
         ],
       },
       {
+<<<<<<< HEAD
         test: /\.css$/,
         use: [
           {
@@ -53,6 +67,12 @@ module.exports = {
             loader: 'file-loader',
           },
         ],
+=======
+        test: /\.(png|jpg|jpeg|gif|svg|ttf|woff|eot)$/,
+        use: {
+          loader: 'file-loader',
+        },
+>>>>>>> 761877a157605f5d8873638f881f5bee4bc4e753
       },
     ],
   },
@@ -73,5 +93,10 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, '../dist'),
+  },
+  resolve: {
+    alias: {
+      '@': resolve('src/common/'),
+    },
   },
 };

@@ -6,7 +6,7 @@ import app from './index.vue';
 
 import tools from './common/js/index';
 import request from './common/js/request';
-
+import './common/css/iconfont.css';
 import './common/css/index.scss';
 import './common/css/iconfont.css';
 
