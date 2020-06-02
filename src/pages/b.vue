@@ -1,8 +1,7 @@
 <template>
-<<<<<<< HEAD
     <div>
         <div class="b">
-            <h3>增加人员</h3>
+            <h3>增加人员1</h3>
       <button @click="back()">返回</button>
     </div>
          <div class="box">
@@ -122,7 +121,6 @@ form input:nth-last-child(1){
     color: #ffffff;
 }
 </style>
-=======
   <div>
     <div class="alayout_header">
       <router-link to="/a" style="padding-right: 6rem; padding-left: 0.5rem; color: black; text-decoration: none;"
@@ -152,4 +150,3 @@ export default {
 };
 </script>
 <style lang="sass" src="../common/css/b.scss"></style>
->>>>>>> 871517ca6ca8913064d2a0fcdf3b9b938aae74c2
