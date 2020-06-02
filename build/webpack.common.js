@@ -22,6 +22,17 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+        ],
+      },
+      {
         test: /\.scss$/,
         use: [
           {
@@ -34,6 +45,12 @@ module.exports = {
             loader: 'sass-loader',
           },
         ],
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg|ttf|woff|eot)$/,
+        use: {
+          loader: 'file-loader',
+        },
       },
     ],
   },
