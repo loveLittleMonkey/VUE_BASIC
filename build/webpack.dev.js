@@ -9,7 +9,7 @@ module.exports = merge(common, {
     host: 'localhost',
     proxy: {
       '/innermanage': {
-        target: 'http://192.168.2.107:8080',
+        target: 'http://192.168.1.155:9080',
       },
     },
   },

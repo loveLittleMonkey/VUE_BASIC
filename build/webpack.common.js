@@ -2,7 +2,9 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-
+function resolve(dir) {
+  return path.join(__dirname, '..', dir);
+}
 module.exports = {
   entry: {
     app: './src/index.js',
@@ -71,5 +73,10 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, '../dist'),
+  },
+  resolve: {
+    alias: {
+      '@': resolve('src/common/'),
+    },
   },
 };
