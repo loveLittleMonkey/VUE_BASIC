@@ -7,7 +7,10 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-
+ *{
+  margin: 0;
+  padding: 0;
+ }
  html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
@@ -22,6 +25,7 @@
   
   body {
     margin: 0;
+    font-size:16px;
   }
   
   /**
@@ -41,6 +45,7 @@
     font-size: 2em;
     margin: 0.67em 0;
   }
+
   
   /* Grouping content
      ========================================================================== */
@@ -72,10 +77,16 @@
   /**
    * Remove the gray background on active links in IE 10.
    */
-  
-  a {
-    background-color: transparent;
+  a{
+    list-style: none;
+    text-decoration: none;
+    color: #323233;
+	  background-color: transparent;
   }
+  li{
+    list-style: none;
+  }
+
   
   /**
    * 1. Remove the bottom border in Chrome 57-
