@@ -18,11 +18,11 @@
 export default {
   data() {
     return {
-        name: '',
-        tel: '',
-        group: '',
-        IDCard: '',
-        addr: '',
+      name: '',
+      tel: '',
+      group: '',
+      IDCard: '',
+      addr: '',
     };
   },
   methods: {
@@ -35,21 +35,22 @@ export default {
         console.log('请求前');
         console.log(this.roster);
         // const res = await this.$request('/carhailingService/login.do');
-        const res = await this.$request('/innermanage/addMember.do?rf=JSON',{
-          ROname:this.name,
-          ROtel:this.tel,
-          ROgroup:this.group,
-          ROIDCard:this.IDCard,
-          ROaddr:this.addr
+        const res = await this.$request('/innermanage/addMember.do?rf=JSON', {
+          ROname: this.name,
+          ROtel: this.tel,
+          ROgroup: this.group,
+          ROIDCard: this.IDCard,
+          ROaddr: this.addr,
         });
         console.log('请求返回', res);
-        if(res.status==200){
-          alert("增加成功！");
-          setTimeout(function(){
-            this.$router.push("/b");
-          },1000); 
-        }else{
-          alert("增加失败！");
+        if (res.status === 200) {
+          alert('增加成功！');
+          // eslint-disable-next-line func-names
+          setTimeout(function () {
+            this.$router.push('/b');
+          }, 1000);
+        } else {
+          alert('增加失败！');
         }
       } catch (err) {
         console.log('出错', err);
@@ -71,7 +72,7 @@ export default {
 }
 .b button {
   font-size: 16px;
-  background-color: slategray ;
+  background-color: slategray;
   /* background-color: rgba($color: #000000, $alpha: 0); */
   outline: none;
   position: absolute;

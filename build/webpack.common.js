@@ -49,30 +49,10 @@ module.exports = {
         ],
       },
       {
-<<<<<<< HEAD
-        test: /\.css$/,
-        use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
-        ],
-      },
-      {
-        test: /\.(png|jpg|gif|svg|ttf|woff|eot|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-          },
-        ],
-=======
         test: /\.(png|jpg|jpeg|gif|svg|ttf|woff|eot)$/,
         use: {
           loader: 'file-loader',
         },
->>>>>>> 761877a157605f5d8873638f881f5bee4bc4e753
       },
     ],
   },
