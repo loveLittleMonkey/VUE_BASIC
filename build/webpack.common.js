@@ -1,7 +1,7 @@
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
+// const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -83,7 +83,7 @@ module.exports = {
       },
       chunksSortMode: 'dependency',
     }),
-    new VueLoaderPlugin(),
+    // new VueLoaderPlugin(),
     new CopyWebpackPlugin([{ from: path.resolve(__dirname, '../static'), to: path.resolve(__dirname, '../dist/static') }]),
     // new path.resolve(__dirname, '../dist')([{ from: path.resolve(__dirname, '../static'),  }]),
   ],
