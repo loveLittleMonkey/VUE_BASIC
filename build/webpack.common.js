@@ -2,9 +2,8 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-function resolve(dir) {
-  return path.join(__dirname, '..', dir);
-}
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 module.exports = {
   entry: {
     app: './src/index.js',
@@ -49,9 +48,25 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg|ttf|woff|eot)$/,
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              esModule: false,
+              limit: 102400, // 1024 byte = 1kb 设置小于100k就转base64
+              outputPath: 'images/',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
         use: {
           loader: 'file-loader',
+          options: {
+            outputPath: 'iconfont/',
+          },
         },
       },
     ],
@@ -69,6 +84,8 @@ module.exports = {
       chunksSortMode: 'dependency',
     }),
     new VueLoaderPlugin(),
+    new CopyWebpackPlugin([{ from: path.resolve(__dirname, '../static'), to: path.resolve(__dirname, '../dist/static') }]),
+    // new path.resolve(__dirname, '../dist')([{ from: path.resolve(__dirname, '../static'),  }]),
   ],
   output: {
     filename: '[name].bundle.js',
@@ -76,7 +93,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@': resolve('src/common/'),
+      '@': path.resolve(__dirname, '../src'),
+      '@a': path.resolve(__dirname, '../src/assets/'),
     },
   },
 };

@@ -4,9 +4,9 @@ import Router from 'vue-router';
 Vue.use(Router);
 const router = new Router({
   routes: [
-    { path: '/', redirect: '/backInfo' },
-    { path: '/a', component: () => import('../pages/backInfo.vue') },
-    { path: '/backInfo', component: () => import('../pages/backInfo.vue') },
+    // { path: '/', redirect: '/backInfo' },
+    // { path: '/a', component: () => import('../pages/backInfo.vue') },
+    // { path: '/backInfo', component: () => import('../pages/backInfo.vue') },
     // { path: '/successInfo', component: () => import('../pages/successInfo.vue') },
     { path: '/c', component: () => import('../pages/c.vue') },
     { path: '/succ', component: () => import('../pages/succ.vue') },
