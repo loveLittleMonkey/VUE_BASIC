@@ -16,7 +16,7 @@ module.exports = {
       },
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
       {
-        test: /\.js$/,
+        test: /\.(js|vue)$/,
         use: {
           loader: 'eslint-loader',
         },
@@ -97,4 +97,5 @@ module.exports = {
       '@a': path.resolve(__dirname, '../src/assets/'),
     },
   },
+  stats: 'minimal',
 };
